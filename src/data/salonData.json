@@ -1,0 +1,27 @@
+{
+  "services": [
+    { "id": "hc_1", "categoryId": "hair", "name": "Haircut & Styling", "desc": "Classic, Fade, Layered, Blow-Dry, Temporary Styling", "price": "₹99", "duration": "30 mins" },
+    { "id": "hc_2", "categoryId": "hair", "name": "Beard Grooming", "desc": "Beard Trim, Shape-Up, Hot Towel Shave", "price": "₹70", "duration": "20 mins" },
+    { "id": "hc_3", "categoryId": "hair", "name": "Clean Shave", "desc": "Precision clean shave with pre-shave oil", "price": "₹50", "duration": "15 mins" },
+    { "id": "hc_4", "categoryId": "hair", "name": "Styling Beard", "desc": "Advanced beard styling and contouring", "price": "₹70", "duration": "20 mins" },
+    { "id": "hc_5", "categoryId": "hair", "name": "Hair Treatments", "desc": "Hair Spa, Keratin Treatment, Smoothening, Deep Conditioning", "price": "₹500", "duration": "60 mins" },
+    { "id": "hc_6", "categoryId": "hair", "name": "Hair Mask", "desc": "Deep nourishing protein hair mask", "price": "₹500", "duration": "45 mins" },
+    { "id": "hc_7", "categoryId": "hair", "name": "Hair Coloring", "desc": "Global Coloring, Highlights, Balayage, Root Touch-Ups", "price": "Ask for price", "duration": "Variable" },
+    { "id": "hc_8", "categoryId": "hair", "name": "Hair Straightening", "desc": "Permanent hair straightening and rebonding", "price": "₹1200 - ₹1500", "duration": "120 mins" },
+    { "id": "sk_1", "categoryId": "skin", "name": "Premium Facials", "desc": "Classic Clean-Up, Fruit Facial, Gold/Diamond Facial, Anti-Tan Treatments", "price": "~₹1000", "duration": "60 mins" },
+    { "id": "sk_2", "categoryId": "skin", "name": "De-Tan & Bleach", "desc": "Face, Neck, and Body De-Tan Services", "price": "₹300", "duration": "30 mins" },
+    { "id": "sk_3", "categoryId": "skin", "name": "Face Mask", "desc": "Rejuvenating and cleansing application", "price": "₹150", "duration": "20 mins" },
+    { "id": "sk_4", "categoryId": "skin", "name": "Skin Glow Treatments", "desc": "Hydra Facial, Chemical Peels with Expert Guidance, Skin Brightening", "price": "Ask for price", "duration": "Variable" },
+    { "id": "sp_1", "categoryId": "body", "name": "Massage Therapy", "desc": "Head Massage, Back Massage, Full Body Relaxing Massage", "price": "₹500", "duration": "45 mins" },
+    { "id": "sp_2", "categoryId": "body", "name": "Body Scrub & Polishing", "desc": "Exfoliation and deep moisturizer application", "price": "Ask for price", "duration": "60 mins" },
+    { "id": "sp_3", "categoryId": "body", "name": "Manicure & Pedicure", "desc": "Classic, Spa, Gel Manicure/Pedicure", "price": "Ask for price", "duration": "60 mins" },
+    { "id": "gr_1", "categoryId": "grooming", "name": "Threading & Waxing", "desc": "Eyebrow Shaping, Full Body Waxing – Normal, Rica, Bean Wax", "price": "₹150 - ₹500", "duration": "30 mins" },
+    { "id": "gr_2", "categoryId": "grooming", "name": "Nail Art", "desc": "Nail Extensions, Gel Polish, Creative Nail Designs", "price": "Ask for price", "duration": "60 mins" }
+  ],
+  "categories": [
+    { "id": "hair", "title": "Hair Services (Hair Care)", "iconName": "Scissors" },
+    { "id": "skin", "title": "Skin & Facial Services", "iconName": "Sparkles" },
+    { "id": "body", "title": "Body & Spa Services", "iconName": "Droplet" },
+    { "id": "grooming", "title": "Grooming & Aesthetics", "iconName": "UserCheck" }
+  ]
+}

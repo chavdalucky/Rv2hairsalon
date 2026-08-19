@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Category": {
+      "title": "Category",
+      "description": "Category for services like Hair, Skin, Body, etc.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "order": { "type": "number" },
+        "iconName": { "type": "string" }
+      },
+      "required": ["title", "order"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "A specific service offered by the salon.",
+      "type": "object",
+      "properties": {
+        "categoryId": { "type": "string" },
+        "name": { "type": "string" },
+        "desc": { "type": "string" },
+        "price": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["categoryId", "name", "desc", "price", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "categories": {
+      "schema": "Category",
+      "description": "Collection of service categories."
+    },
+    "services": {
+      "schema": "Service",
+      "description": "Collection of individual services."
+    }
+  }
+}

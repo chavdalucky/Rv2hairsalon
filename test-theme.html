@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    .light-mode {
+      --color-zinc-950: #fafafa;
+      --color-white: #000000;
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-white">
+  <h1>Test</h1>
+  <button class="light-mode" onclick="document.body.classList.toggle('light-mode')">Toggle</button>
+</body>
+</html>

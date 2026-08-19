@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+  body {
+    background-color: #09090b; /* zinc-950 */
+    color: #d4d4d8; /* zinc-300 */
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* Light Mode Overrides */
+  .light-mode {
+    --color-zinc-950: #fafafa; /* zinc-50 */
+    --color-zinc-900: #f4f4f5; /* zinc-100 */
+    --color-zinc-800: #e4e4e7; /* zinc-200 */
+    --color-zinc-700: #d4d4d8; /* zinc-300 */
+    --color-zinc-600: #a1a1aa; /* zinc-400 */
+    --color-zinc-500: #71717a; /* zinc-500 */
+    --color-zinc-400: #52525b; /* zinc-600 */
+    --color-zinc-300: #3f3f46; /* zinc-700 */
+    --color-zinc-200: #27272a; /* zinc-800 */
+    --color-zinc-100: #18181b; /* zinc-900 */
+    --color-zinc-50:  #09090b; /* zinc-950 */
+    
+    --color-white: #000000;
+    --color-black: #ffffff;
+    
+    background-color: #fafafa;
+    color: #3f3f46;
+    color-scheme: light;
+  }
+  
+  /* Global transition for theme switching */
+  body, div, nav, header, section, footer, a, button, input, textarea, select, span, p, h1, h2, h3, h4, h5, h6 {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-white);
+  }
+}
+
+@layer utilities {
+  .text-luxury-gold {
+    text-shadow: 0 0 15px rgba(251, 191, 36, 0.4), 0 0 30px rgba(251, 191, 36, 0.2);
+  }
+  
+  .luxury-gold-gradient {
+    background: linear-gradient(
+      to right,
+      #b48608 0%,
+      #fce181 25%,
+      #fff4d0 50%,
+      #fce181 75%,
+      #b48608 100%
+    );
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes luxury-shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .animate-luxury-shimmer {
+    animation: luxury-shimmer 4s linear infinite;
+  }
+}
+@layer utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes luxury-swing {
+      0%, 100% {
+        transform: rotate(-2deg) translateY(-2px) translateZ(0);
+      }
+      50% {
+        transform: rotate(2deg) translateY(2px) translateZ(0);
+      }
+    }
+
+    .animate-luxury-swing {
+      display: inline-block;
+      animation: luxury-swing var(--swing-duration, 3s) ease-in-out infinite alternate var(--swing-delay, 0s);
+      will-change: transform;
+      transform-origin: top center;
+    }
+  }
+
+  .luxury-glow {
+    text-shadow: 0 0 15px rgba(251, 191, 36, 0.4), 0 0 30px rgba(251, 191, 36, 0.2);
+  }
+
+  @keyframes luxury-shimmer-sweep {
+    0% { transform: translateX(-150%); }
+    15%, 100% { transform: translateX(150%); }
+  }
+
+  .animate-luxury-shimmer-sweep {
+    animation: luxury-shimmer-sweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    will-change: transform;
+  }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes luxury-breathing {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    
+    .animate-luxury-breathing {
+      animation: luxury-breathing 2.5s ease-in-out infinite;
+      will-change: transform;
+    }
+    
+    @keyframes luxury-pulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
+      50% { box-shadow: 0 0 25px rgba(245, 158, 11, 0.6); }
+    }
+
+    .animate-luxury-pulse {
+      animation: luxury-pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes luxury-button-shimmer {
+      0% { transform: translateX(-250%) skewX(-15deg); }
+      20%, 100% { transform: translateX(250%) skewX(-15deg); }
+    }
+
+    .animate-luxury-button-shimmer {
+      animation: luxury-button-shimmer 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      will-change: transform;
+    }
+  }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes luxury-arrow-bounce {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+    }
+    
+    .animate-luxury-arrow {
+      animation: luxury-arrow-bounce 1.5s ease-in-out infinite;
+      will-change: transform;
+    }
+    
+    @keyframes luxury-border-glow {
+      0%, 100% { box-shadow: 0 0 5px rgba(245, 158, 11, 0.1), inset 0 0 5px rgba(245, 158, 11, 0.05); }
+      50% { box-shadow: 0 0 12px rgba(245, 158, 11, 0.3), inset 0 0 8px rgba(245, 158, 11, 0.1); }
+    }
+
+    .animate-luxury-border-glow {
+      animation: luxury-border-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes luxury-button-shimmer-slow {
+      0%, 20% { transform: translateX(-250%) skewX(-15deg); }
+      40%, 100% { transform: translateX(250%) skewX(-15deg); }
+    }
+
+    .animate-luxury-button-shimmer-slow {
+      animation: luxury-button-shimmer-slow 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      will-change: transform;
+    }
+  }
+}
+
+
+
+@layer utilities {
+  @layer utilities {
+  .font-gujarati,
+  .font-gujarati h1, 
+  .font-gujarati h2, 
+  .font-gujarati h3, 
+  .font-gujarati h4, 
+  .font-gujarati h5, 
+  .font-gujarati h6,
+  .font-gujarati .font-serif {
+    font-family: 'Noto Sans Gujarati', sans-serif !important;
+  }
+}
+}

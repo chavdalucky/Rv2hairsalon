@@ -1,0 +1,6 @@
+{
+  "name": "RV 2 Hair Salon",
+  "description": "A premium and luxury hair salon website built for RV 2 Hair Salon, based in Prachi.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
